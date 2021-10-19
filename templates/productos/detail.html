@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12 text-center mt-5 mb-5">
+            <h1> {{ object.title }} </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 mb-5">
+            <div class="card shadow" >
+                <img src="{{ object.image.url }}" class="card-img-top" alt="...">
+              
+              </div>
+        </div>
+        <div class="col-lg-4 mb-5">
+            <div class="card shadow">
+                <div class="card-body">
+                  {{ object.decription }}
+                </div>
+              </div>
+
+        </div>
+        <div class="col-lg-4 mb-5">
+            <div class="card" >
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"> Stock: {{ object.stock }} </li>
+                  <li class="list-group-item"> 
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1">Cantidad: </span>
+                        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                      
+                    </li>
+                  <li class="list-group-item text-center"> <button type="button" class="btn btn-dark btn-lg">Añadir al carrito</button> </li>
+                </ul>
+              </div>
+        </div>
+    </div>
+{% endblock content %}
